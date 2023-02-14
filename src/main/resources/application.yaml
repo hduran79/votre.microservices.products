@@ -14,7 +14,6 @@ spring:
          enabled: true
          force: true
    datasource:
-      url: jdbc:h2:mem:testdb
       # CONFIG MYBATIS
       votre:
          driverClassName: com.ibm.as400.access.AS400JDBCDriver
@@ -24,9 +23,19 @@ spring:
             connectionTimeout: 30000 
             idleTimeout: 600000
             maxLifetime: 1800000
-   jpa:
-      defer-datasource-initialization: true
-      show-sql: true
+#      jpa:
+#         url: jdbc:h2:mem:testdb
+#         driver-class-name: org.h2.Driver         
+#         defer-datasource-initialization: true
+#         show-sql: true
+         
+# PostgreSQL DB - "bar"
+      bar:
+         datasource:
+            url: jdbc:postgresql://localhost:5432/client?currentSchema=public
+            username: postgres
+            password: 12345678
+            driver-class-name: org.postgresql.Driver
       
 management:
    endpoints:

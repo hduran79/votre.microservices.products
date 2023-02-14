@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.votre.microservices.products.repository.client.IClientRepository">
+<mapper namespace="com.votre.microservices.products.repository.payment.IPaymentRepository">
 
   <parameterMap type="TransaccionDTO" id="consultClient_Params">
   	<parameter property="codCia" jdbcType="VARCHAR" mode="INOUT"/>	
@@ -20,7 +20,7 @@
   	<parameter property="descStatus" jdbcType="VARCHAR" mode="INOUT"/>
   </parameterMap>
   
-  <resultMap type="ClienteDTO" id="consultClient_Result">
+  <resultMap type="PaymentDTO" id="consultClient_Result">
   	<result property="pin" column="PIN"/>
 	<result property="idCliente" column="IDCLIENTE"/>
     <result property="nombre" column="NCLIENTE" />

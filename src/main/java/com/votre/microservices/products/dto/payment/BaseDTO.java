@@ -1,4 +1,4 @@
-package com.votre.microservices.products.dto.client;
+package com.votre.microservices.products.dto.payment;
 
 import java.io.Serializable;
 

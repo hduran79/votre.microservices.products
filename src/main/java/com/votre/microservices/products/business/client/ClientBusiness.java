@@ -5,26 +5,26 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.votre.microservices.products.dto.client.ClienteDTO;
-import com.votre.microservices.products.dto.client.TransaccionDTO;
-import com.votre.microservices.products.repository.client.IClientRepository;
+import com.votre.microservices.products.dto.payment.PaymentDTO;
+import com.votre.microservices.products.dto.payment.TransaccionDTO;
+import com.votre.microservices.products.repository.payment.IPaymentRepository;
 
 @Service
 public class ClientBusiness implements IClientBusiness {
 
     @Autowired
-    IClientRepository repository;
+    IPaymentRepository repository;
 
     ClientBusiness() {
         /* only sonar */
     }
 
-    public ClientBusiness(IClientRepository repository) {
+    public ClientBusiness(IPaymentRepository repository) {
         this.repository = repository;
     }
 
     @Override
-    public List<ClienteDTO> consultClient(TransaccionDTO dto) {
+    public List<PaymentDTO> consultClient(TransaccionDTO dto) {
         return repository.consultClient(dto);
     }
 

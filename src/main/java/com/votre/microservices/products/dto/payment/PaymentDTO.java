@@ -1,4 +1,4 @@
-package com.votre.microservices.products.dto.client;
+package com.votre.microservices.products.dto.payment;
 
 import java.io.Serializable;
 
@@ -13,7 +13,7 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-public class ClienteDTO implements Serializable {
+public class PaymentDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

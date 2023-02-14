@@ -1,4 +1,4 @@
-package com.votre.microservices.products.dto.client;
+package com.votre.microservices.products.dto.payment;
 
 import java.io.Serializable;
 import java.util.List;
@@ -36,5 +36,5 @@ public class TransaccionDTO extends BaseDTO implements Serializable {
     @Builder.Default
     private String comodin3 = "";
 
-    private List<ClienteDTO> clientes;
+    private List<PaymentDTO> clientes;
 }

@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Primary;
 import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
-@MapperScan(value = "com.votre.microservices.products.repository.client",
+@MapperScan(value = "com.votre.microservices.products.repository.payment",
     sqlSessionFactoryRef = "votreSessionFactory")
 public class MyBatisConfiguration {
 
@@ -23,7 +23,7 @@ public class MyBatisConfiguration {
     
     private static final String VOTRE_HANDLER_PACKAGE = "com.votre.microservices.products.repository.handler";
     
-    private static final String VOTRE_ALIAS_PACKAGE = "com.votre.microservices.products.dto.client";
+    private static final String VOTRE_ALIAS_PACKAGE = "com.votre.microservices.products.dto.payment";
 
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource.votre")

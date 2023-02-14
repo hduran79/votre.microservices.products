@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.votre.microservices.products.business.client.IClientBusiness;
-import com.votre.microservices.products.dto.client.ClienteDTO;
-import com.votre.microservices.products.dto.client.TransaccionDTO;
+import com.votre.microservices.products.dto.payment.PaymentDTO;
+import com.votre.microservices.products.dto.payment.TransaccionDTO;
 
 @RestController
 @RequestMapping(value = "client")
@@ -26,7 +26,7 @@ public class ClientController {
     private IClientBusiness business;
 
     @GetMapping(path = "/")
-    public List<ClienteDTO> consultClient(@Valid @RequestBody TransaccionDTO dto) {
+    public List<PaymentDTO> consultClient(@Valid @RequestBody TransaccionDTO dto) {
         return business.consultClient(dto);
     }
 
