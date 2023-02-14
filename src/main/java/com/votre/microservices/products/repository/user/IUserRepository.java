@@ -1,4 +1,4 @@
-package com.votre.microservices.products.repository;
+package com.votre.microservices.products.repository.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

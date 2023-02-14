@@ -1,4 +1,4 @@
-package com.votre.microservices.products.dto;
+package com.votre.microservices.products.dto.dummy;
 
 import java.io.Serializable;
 

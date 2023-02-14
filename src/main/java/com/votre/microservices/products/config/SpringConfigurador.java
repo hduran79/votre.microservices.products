@@ -4,7 +4,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan({"com.votre.ms.exception.*", "com.votre.configuration"})
+@ComponentScan({"com.votre.shared.common.util.*"})
 public class SpringConfigurador {
 
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.votre.microservices.products.repository.client.IClientRepository">
+
+  <parameterMap type="TransaccionDTO" id="consultClient_Params">
+  	<parameter property="codCia" jdbcType="VARCHAR" mode="INOUT"/>	
+  	<parameter property="accion" jdbcType="VARCHAR" mode="INOUT"/>
+	<parameter property="referencia" jdbcType="VARCHAR" mode="INOUT"/>
+	<parameter property="nombre" jdbcType="VARCHAR" mode="INOUT"/>
+	<parameter property="valorPago" jdbcType="DECIMAL" mode="INOUT"/>
+	<parameter property="idTienda" jdbcType="VARCHAR" mode="INOUT"/>
+	<parameter property="usuario" jdbcType="VARCHAR" mode="INOUT"/>
+	<parameter property="formaPago" jdbcType="VARCHAR" mode="INOUT"/>
+	<parameter property="comodin1" jdbcType="VARCHAR" mode="INOUT"/>
+	<parameter property="comodin2" jdbcType="VARCHAR" mode="INOUT"/>
+	<parameter property="comodin3" jdbcType="VARCHAR" mode="INOUT"/>	
+  	<parameter property="status" jdbcType="VARCHAR" mode="INOUT"/>
+  	<parameter property="descStatus" jdbcType="VARCHAR" mode="INOUT"/>
+  </parameterMap>
+  
+  <resultMap type="ClienteDTO" id="consultClient_Result">
+  	<result property="pin" column="PIN"/>
+	<result property="idCliente" column="IDCLIENTE"/>
+    <result property="nombre" column="NCLIENTE" />
+	<result property="saldo" column="SALDO"/>
+  	<result property="direccion" column="DIRECCION"/>
+  	<result property="telefono" column="TELEFONO"/>
+  </resultMap>
+  
+  <select id="consultClient" parameterMap="consultClient_Params" resultMap="consultClient_Result" statementType="CALLABLE">
+  	{ CALL VOTREP00.WS_StorePayment(?,?,?,?,?,?,?,?,?,?,?,?,?) }
+  </select>
+
+</mapper>
